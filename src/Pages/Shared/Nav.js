@@ -43,22 +43,22 @@ export default function Nav() {
   };
 
   return (
-    <div className="flex items-center justify-between pt-4">
+    <div className="flex items-center justify-between pt-4 flex-wrap gap-10 md:gap-7">
       <Link to="/">
         <div className="flex items-center gap-2 text-2xl">
           <h1 className="font-semibold">Photgraphy</h1>
           <FaCamera className="text-amber-500" />
         </div>
       </Link>
-      <div className="">
-        <ul className="space-x-3">
+      <div>
+        <ul className="flex flex-wrap gap-4 items-center">
           {navItems.map((el, i) => (
             <NavLink
               key={i}
               to={el.path}
               className={({ isActive }) =>
                 isActive
-                  ? "bg-amber-500 text-white font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                  ? "bg-amber-500 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400 "
                   : "font-semibold transition duration-300 px-3 py-1 rounded"
               }
             >
@@ -74,7 +74,7 @@ export default function Nav() {
                   to={el.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-amber-500 text-white font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                      ? "bg-amber-500 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
                       : "font-semibold transition duration-300 px-3 py-1 rounded"
                   }
                 >
@@ -93,7 +93,7 @@ export default function Nav() {
               to="/login"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-amber-500 text-white font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                  ? "bg-amber-500 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
                   : "font-semibold transition duration-300 px-3 py-1 rounded"
               }
             >

@@ -13,8 +13,6 @@ export default function Login() {
 
   const from = location.state?.from?.pathname || "/";
 
-  console.log(from);
-
   const handleLogin = async function (e) {
     e.preventDefault();
     const form = e.target;
@@ -41,7 +39,9 @@ export default function Login() {
       setError("");
       await googleLogin();
 
-      navigate("/");
+      setTimeout(() => {
+        navigate(from, { replace: true });
+      }, 300);
     } catch (err) {
       setError(err.message);
       console.log(err);
