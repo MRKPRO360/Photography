@@ -1,6 +1,7 @@
 import { FaStar, FaDollarSign } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export default function ServiceCard({
-  service: { title, img, rating, price, description },
+  service: { _id, title, img, rating, price, description },
 }) {
   return (
     <div className="rounded-md shadow shadow-amber-100">
@@ -28,13 +29,15 @@ export default function ServiceCard({
           <span>Price:</span>
           <span className="flex items-center">
             <FaDollarSign className="text-amber-500" />
-            {price}
+            <span>{price}</span>
           </span>
         </div>
       </div>
-      <button className="block w-full py-[6px] mt-4  text-center text-white transition duration-300 rounded shadow-md bg-amber-400 shadow-amber-400 hover:bg-amber-500 active:translate-y-1">
-        View Details
-      </button>
+      <Link to={`/services/${_id}`}>
+        <button className="block w-full py-[6px] mt-4 font-semibold text-center text-white transition duration-300 rounded shadow-md bg-amber-400 shadow-amber-400 hover:bg-amber-500 active:translate-y-1">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 }
