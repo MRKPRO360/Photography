@@ -6,6 +6,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase";
@@ -56,7 +57,7 @@ export default function AuthProvider({ children }) {
 
   // logout
   const logout = async function () {
-    return await logout(auth);
+    return await signOut(auth);
   };
 
   const value = {

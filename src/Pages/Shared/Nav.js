@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaCamera } from "react-icons/fa";
 import { useAuth } from "../../Context/AuthContext";
 const navItems = [
@@ -25,17 +25,22 @@ const signedNav = [
     path: "/addService",
     text: "Add Service",
   },
-  {
-    path: "/logout",
-    text: "Logout",
-  },
 ];
 
 // add review: review
 // myServices: user services
 // logout or login
 export default function Nav() {
-  const { currentUser } = useAuth();
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = async function () {
+    try {
+      await logout();
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <div className="flex items-center justify-between pt-4">
@@ -76,6 +81,12 @@ export default function Nav() {
                   {el.text}
                 </NavLink>
               ))}
+              <span
+                onClick={handleLogout}
+                className="cursor-pointer font-semibold transition duration-300 px-3 py-1 rounded"
+              >
+                Logout
+              </span>
             </>
           ) : (
             <NavLink
