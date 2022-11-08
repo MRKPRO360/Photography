@@ -51,7 +51,7 @@ export default function Login() {
   return (
     <div>
       <form
-        className="py-8 min-h-[490px] space-y-8 shadow rounded-md shadow-blue-100"
+        className="py-8 min-h-[490px] space-y-8 shadow rounded-md shadow-amber-100"
         onSubmit={handleLogin}
       >
         <div className="flex items-center w-11/12 gap-4 mx-auto md:w-2/3">
@@ -65,7 +65,7 @@ export default function Login() {
             type="email"
             id="email"
             name="email"
-            className="w-full px-4 py-2 leading-tight transition duration-300 border-2 border-gray-200 rounded-md appearance-none bg-gray-50 focus:outline-none focus:bg-white focus:border-blue-500"
+            className="w-full px-4 py-2 leading-tight transition duration-300 border-2 border-gray-200 rounded-md appearance-none bg-gray-50 focus:outline-none focus:bg-white focus:border-amber-500"
             placeholder="example@gmail.com"
             required
           />
@@ -82,7 +82,7 @@ export default function Login() {
             type="password"
             id="password"
             name="password"
-            className="w-full px-4 py-2 leading-tight transition duration-300 border-2 border-gray-200 rounded-md appearance-none bg-gray-50 focus:outline-none focus:bg-white focus:border-blue-500"
+            className="w-full px-4 py-2 leading-tight transition duration-300 border-2 border-gray-200 rounded-md appearance-none bg-gray-50 focus:outline-none focus:bg-white focus:border-amber-500"
             placeholder="**********"
             required
           />
@@ -98,14 +98,14 @@ export default function Login() {
             <button
               disabled={loading}
               type="submit"
-              className="w-32 px-4 py-2 text-base font-semibold text-white transition duration-300 bg-blue-400 rounded hover:bg-blue-500"
+              className="w-32 px-4 py-2 text-base font-semibold text-white transition duration-300 rounded bg-amber-400 hover:bg-amber-500"
             >
               Login
             </button>
             <span className="mr-[60%] xl:mr-0">Or, login with </span>
             <div
               onClick={handleGoogleLogin}
-              className="flex items-center justify-center w-32 gap-2 px-4 py-2 text-base font-semibold text-blue-500 transition duration-300 border border-blue-500 rounded cursor-pointer hover:bg-blue-500 hover:text-white"
+              className="flex items-center justify-center w-32 gap-2 px-4 py-2 text-base font-semibold transition duration-300 border rounded cursor-pointer text-amber-500 border-amber-500 hover:bg-amber-500 hover:text-white"
             >
               <FaGoogle />
               <span>Google</span>
@@ -116,7 +116,7 @@ export default function Login() {
         <div className="flex items-center w-11/12 gap-4 mx-auto font-bold text-gray-500 md:w-2/3">
           <p>
             Already have an account &nbsp;
-            <Link className="text-blue-500 underline" to="/signup">
+            <Link className="underline text-amber-500" to="/signup">
               Signup
             </Link>
             &nbsp; instead.
