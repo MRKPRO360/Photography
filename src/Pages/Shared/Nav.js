@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaCamera } from "react-icons/fa";
+import { useAuth } from "../../Context/AuthContext";
 const navItems = [
   {
     path: "/",
@@ -15,10 +16,27 @@ const navItems = [
   },
 ];
 
+const signedNav = [
+  {
+    path: "/myReviews",
+    text: "My Reviews",
+  },
+  {
+    path: "/addService",
+    text: "Add Service",
+  },
+  {
+    path: "/logout",
+    text: "Logout",
+  },
+];
+
 // add review: review
 // myServices: user services
 // logout or login
 export default function Nav() {
+  const { currentUser } = useAuth();
+
   return (
     <div className="flex items-center justify-between pt-4">
       <Link to="/">
@@ -42,6 +60,35 @@ export default function Nav() {
               {el.text}
             </NavLink>
           ))}
+
+          {currentUser?.uid ? (
+            <>
+              {signedNav.map((el, i) => (
+                <NavLink
+                  key={i}
+                  to={el.path}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-amber-500 text-white font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                      : "font-semibold transition duration-300 px-3 py-1 rounded"
+                  }
+                >
+                  {el.text}
+                </NavLink>
+              ))}
+            </>
+          ) : (
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-amber-500 text-white font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                  : "font-semibold transition duration-300 px-3 py-1 rounded"
+              }
+            >
+              Login
+            </NavLink>
+          )}
         </ul>
       </div>
     </div>

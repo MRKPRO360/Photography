@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import img from "../../../images/pizza-cook.jpg";
+import img from "../../../images/photographer.jpg";
 export default function Banner() {
   return (
     <div className="justify-between gap-10 space-y-10 bg-white rounded-md lg:flex lg:space-y-0">

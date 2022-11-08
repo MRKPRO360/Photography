@@ -20,11 +20,12 @@ export default function Signup() {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+    const photoLink = form.photoLink.value;
 
     try {
       setError("");
       setLoading(true);
-      await signup(email, password, name);
+      await signup(email, password, name, photoLink);
     } catch (err) {
       setLoading(false);
       setError(err.message);
@@ -67,6 +68,23 @@ export default function Signup() {
             name="name"
             className="w-full px-4 py-2 leading-tight transition duration-300 border-2 border-gray-200 rounded-md appearance-none bg-gray-50 focus:outline-none focus:bg-white focus:border-blue-500"
             placeholder="Your name"
+            required
+          />
+        </div>
+
+        <div className="flex items-center w-11/12 gap-4 mx-auto md:w-2/3 ">
+          <label
+            className="block w-40 font-bold text-gray-500 "
+            htmlFor="photoLink"
+          >
+            Photo Link:
+          </label>
+          <input
+            type="text"
+            id="photoLink"
+            name="photoLink"
+            className="w-full px-4 py-2 leading-tight transition duration-300 border-2 border-gray-200 rounded-md appearance-none bg-gray-50 focus:outline-none focus:bg-white focus:border-blue-500"
+            placeholder="Your photo link"
             required
           />
         </div>
