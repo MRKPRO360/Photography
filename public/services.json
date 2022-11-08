@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Vegetarian Pizza",
+    "img": "https://i.ibb.co/yk4kPP9/vegetarian-pizza.jpg"
+  },
+  {
+    "name": "Organic Pizza",
+    "img": "https://i.ibb.co/hXj0ypy/organic-pizza.jpg"
+  },
+  {
+    "name": "Sauce Pizza",
+    "img": "https://i.ibb.co/Qf67fZq/sauce-pizza.jpg"
+  },
+  {
+    "name": "Onion Pizza",
+    "img": "https://i.ibb.co/wpjDKHg/onion-pizza.jpg"
+  },
+  {
+    "name": "Italian Pizza",
+    "img": "https://i.ibb.co/Vv4bJRX/homemade-pizza.jpg"
+  },
+  {
+    "name": "Egg Pizza",
+    "img": "https://i.ibb.co/mc836Ns/egg-pizza.jpg"
+  }
+]

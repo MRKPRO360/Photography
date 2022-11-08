@@ -4,9 +4,11 @@ import Nav from "../Pages/Shared/Nav";
 
 export default function Main() {
   return (
-    <div>
+    <div className="px-5 mx-auto xl:px-0 max-w-7xl">
       <Nav />
-      <Outlet />
+      <div className="pt-20 pb-16">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
