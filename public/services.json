@@ -1,26 +1,44 @@
 [
   {
-    "name": "Vegetarian Pizza",
-    "img": "https://i.ibb.co/yk4kPP9/vegetarian-pizza.jpg"
+    "title": "Vegetarian Pizza",
+    "img": "https://i.ibb.co/yk4kPP9/vegetarian-pizza.jpg",
+    "rating": 4,
+    "price": 4.99,
+    "description": "This vegetarian pizza made with all kinds of vegetable flavour. Hot ingredients with natural color which will give you a different or unique taste than the others. It has a larger and thicker crust in comparison to other types of thin pizza."
   },
   {
-    "name": "Organic Pizza",
-    "img": "https://i.ibb.co/hXj0ypy/organic-pizza.jpg"
+    "title": "Organic Pizza",
+    "img": "https://i.ibb.co/hXj0ypy/organic-pizza.jpg",
+    "rating": 5,
+    "price": 6,
+    "description": "It's hot, and succulent at the same time. It's truly a wonderful taste when you take that first bite, and al the flavors of the sauce, cheese, and seasoning go rushing towards your taste buds. Second thing, the sound pizza makes. That crunchy sound you hear when biting into that delicious seasoned crus"
   },
   {
-    "name": "Sauce Pizza",
-    "img": "https://i.ibb.co/Qf67fZq/sauce-pizza.jpg"
+    "title": "Sauce Pizza",
+    "img": "https://i.ibb.co/Qf67fZq/sauce-pizza.jpg",
+    "rating": 4,
+    "price": 4,
+    "description": "This pizza is served with or without cheese, and often with the cheese underneath the sauce to prevent the pie from becoming soggy. It is not cooked with yeast like the majority of other pizzas are. While the crust and the base are crunchy, the same cannot be said for the middle of the pizza, which is light and soft."
   },
   {
-    "name": "Onion Pizza",
-    "img": "https://i.ibb.co/wpjDKHg/onion-pizza.jpg"
+    "title": "Onion Pizza",
+    "img": "https://i.ibb.co/wpjDKHg/onion-pizza.jpg",
+    "rating": 5,
+    "price": 4,
+    "description": "This pizza is usually heavier on the sauce than the cheese. The sauce typically has a tangy tomato paste with a strong oregano flavor. It is often only topped with cheese, which is usually a mix of mozzarella and cheddar or provolone. It may feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion"
   },
   {
-    "name": "Italian Pizza",
-    "img": "https://i.ibb.co/Vv4bJRX/homemade-pizza.jpg"
+    "title": "Italian Pizza",
+    "img": "https://i.ibb.co/Vv4bJRX/homemade-pizza.jpg",
+    "rating": 5,
+    "price": 6.99,
+    "description": "This Italian pizza consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot."
   },
   {
-    "name": "Egg Pizza",
-    "img": "https://i.ibb.co/mc836Ns/egg-pizza.jpg"
+    "title": "Egg Pizza",
+    "img": "https://i.ibb.co/mc836Ns/egg-pizza.jpg",
+    "rating": 4,
+    "price": 3.99,
+    "description": "As it is a deep dish pizza, it can be recognized instantly. When thinking about its size and size, it does look as though it resembles a pie, rather than a pizza. However, it still contains the important cheese and pizza sauce."
   }
 ]
