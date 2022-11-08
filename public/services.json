@@ -1,44 +1,44 @@
 [
   {
-    "title": "Vegetarian Pizza",
-    "img": "https://i.ibb.co/yk4kPP9/vegetarian-pizza.jpg",
+    "title": "Portrait Photography",
+    "img": "https://i.ibb.co/2d5vqvG/portrait.jpg",
     "rating": 4,
     "price": 4.99,
-    "description": "This vegetarian pizza made with all kinds of vegetable flavour. Hot ingredients with natural color which will give you a different or unique taste than the others. It has a larger and thicker crust in comparison to other types of thin pizza."
+    "description": "One of the most common photography styles, portrait photography, or portraiture, aims to capture the personality and mood of an individual or group. Images may be candid or posed, full body or close-ups. Either way, the subject's face and eyes are typically in focus. Lighting and backdrop help to convey tone and emotion. Popular types of photography portraits include senior portraits, family portraits, engagement photos, and professional headshots. The best portrait photographers make clients feel completely comfortable, so that their expressions are natural and relaxed."
   },
   {
-    "title": "Organic Pizza",
-    "img": "https://i.ibb.co/hXj0ypy/organic-pizza.jpg",
+    "title": "Photojournalism",
+    "img": "https://i.ibb.co/cN8vyWL/photojournalism.jpg",
     "rating": 5,
     "price": 6,
-    "description": "It's hot, and succulent at the same time. It's truly a wonderful taste when you take that first bite, and al the flavors of the sauce, cheese, and seasoning go rushing towards your taste buds. Second thing, the sound pizza makes. That crunchy sound you hear when biting into that delicious seasoned crus"
+    "description": "Photojournalism is a way of telling the story of a newsworthy (perhaps even historic) event or scene through photographs. Photojournalism should be as objective and truthful as possible and capturing candid moments as they happen is more important than getting picture-perfect shots. Generally, photojournalists attend planned events with the hope of capturing unplanned, unscripted moments. Their work is routinely published in magazines and newspapers."
   },
   {
-    "title": "Sauce Pizza",
-    "img": "https://i.ibb.co/Qf67fZq/sauce-pizza.jpg",
+    "title": "Fashion Photography",
+    "img": "https://i.ibb.co/8stVY1f/fashion.jpg",
     "rating": 4,
     "price": 4,
-    "description": "This pizza is served with or without cheese, and often with the cheese underneath the sauce to prevent the pie from becoming soggy. It is not cooked with yeast like the majority of other pizzas are. While the crust and the base are crunchy, the same cannot be said for the middle of the pizza, which is light and soft."
+    "description": "Fashion photography showcases and glamorizes fashion clothing, shoes, and accessories to make them more desirable to consumers. It is commonly published in magazines and online. People may choose this niche over different types of photography because of the opportunity to be highly creative in making photographs eye-catching and appealing. Fashion photographers take a lot of full body shots and work in an array of locations, from fashion shows to studios with full lighting setups to city streets and open fields. They utilize many of the same skills as portrait photographers and must practice good teamwork and communication when working with shoot stylists, creative directors, and models."
   },
   {
-    "title": "Onion Pizza",
-    "img": "https://i.ibb.co/wpjDKHg/onion-pizza.jpg",
+    "title": "Sports Photography",
+    "img": "https://i.ibb.co/tDHxGs4/sports.jpg",
     "rating": 5,
     "price": 4,
-    "description": "This pizza is usually heavier on the sauce than the cheese. The sauce typically has a tangy tomato paste with a strong oregano flavor. It is often only topped with cheese, which is usually a mix of mozzarella and cheddar or provolone. It may feature a variety of non-Greek or Greek toppings, such as feta cheese, black olives, and red onion"
+    "description": "By catching athletes, coaches, and even fans at the perfect moment, sports photographs can depict the passion, drama, and emotion that fuels sporting events. Sports photographers must aim and shoot quickly to keep up with the action around them, and it’s best practice to use a higher ISO to shoot at a faster shutter speed. Sports photographers also usually use long, heavy lenses for zooming in on the action. Interesting angles can help make your work stand out in this competitive genre."
   },
   {
-    "title": "Italian Pizza",
-    "img": "https://i.ibb.co/Vv4bJRX/homemade-pizza.jpg",
+    "title": "Still Life Photography",
+    "img": "https://i.ibb.co/JHmDwjH/stilllife.jpg",
     "rating": 5,
     "price": 6.99,
-    "description": "This Italian pizza consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot."
+    "description": "Like it sounds, still life photography features inanimate objects—natural or manmade. Still life photography can be artistic or commercial. It is commonly used in stock photography as well as product advertising. (Think of the product images shown in catalogs, magazines, and billboards.) For still life photographers, object selection, arrangement, and lighting are key to getting a great shot."
   },
   {
-    "title": "Egg Pizza",
-    "img": "https://i.ibb.co/mc836Ns/egg-pizza.jpg",
+    "title": "Architectural Photography",
+    "img": "https://i.ibb.co/7WqhHPn/architectural.jpg",
     "rating": 4,
     "price": 3.99,
-    "description": "As it is a deep dish pizza, it can be recognized instantly. When thinking about its size and size, it does look as though it resembles a pie, rather than a pizza. However, it still contains the important cheese and pizza sauce."
+    "description": "Both the interior and exterior design of buildings and structures are the subject of architectural photography. From warehouses to city bridges to old country barns, this genre encompasses diverse structures. Often, the photograph showcases the structure's most aesthetically pleasing parts, such as a particular beam or archway. Interesting materials and colors may also be emphasized. Lighting can be challenging in architectural photography and, for exteriors, photographers must know how to work with natural light. Gear such as a tilt-shift lens, a tripod, and a panorama head is often useful. Architectural photographs can be of value to designers, architects, leasing companies, and building investors."
   }
 ]

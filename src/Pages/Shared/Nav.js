@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaPizzaSlice } from "react-icons/fa";
+import { FaCamera } from "react-icons/fa";
 const navItems = [
   {
     path: "/",
@@ -23,8 +23,8 @@ export default function Nav() {
     <div className="flex items-center justify-between pt-4">
       <Link to="/">
         <div className="flex items-center gap-2 text-2xl">
-          <h1 className="font-semibold">Foodie</h1>
-          <FaPizzaSlice className="text-amber-500" />
+          <h1 className="font-semibold">Photgraphy</h1>
+          <FaCamera className="text-amber-500" />
         </div>
       </Link>
       <div className="">

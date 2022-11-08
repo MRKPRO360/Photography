@@ -4,7 +4,7 @@ export default function ServiceCard({
   service: { _id, title, img, rating, price, description },
 }) {
   return (
-    <div className="rounded-md shadow shadow-amber-100">
+    <div className="rounded-md shadow shadow-amber-100 flex flex-col justify-between">
       <img
         className="object-cover object-center w-full rounded-md h-72"
         src={img}
