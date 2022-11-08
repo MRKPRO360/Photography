@@ -9,9 +9,9 @@ export default function Banner() {
           <span className="font-bold text-amber-500">...</span>
         </h1>
         <p className="mt-6 text-base font-semibold text-gray-700 sm:text-lg sm:mt-9 lg:mt-12 ">
-          We do our best in order to satisfy yourself. We don't deserve much
-          except your own satisfaction. That's why foodie came to number 1 place
-          in your country. Stay on!
+          Photography is my passion. I try to do my best that's why my client's
+          are satisfied what I do. Photgraphy is my satisfaction not my
+          perfection.
         </p>
         <div className="flex gap-6 mt-10 text-base font-semibold sm:text-lg lg:mt-20">
           <Link

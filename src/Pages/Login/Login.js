@@ -2,18 +2,20 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
-// import SetAuthToken from "../../Utils/SetAuthToken";
 
 export default function Login() {
-  const { login, googleLogin, logout } = useAuth();
-  const location = useLocation();
-  const navigate = useNavigate();
+  const { login, googleLogin } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState("");
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const from = location.state?.from?.pathname || "/";
 
-  const handleLogin = async (e) => {
+  console.log(from);
+
+  const handleLogin = async function (e) {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
@@ -23,13 +25,10 @@ export default function Login() {
       setError("");
       setLoading(true);
       await login(email, password);
-
-      //   const user = result.user;
-      //   const data = await SetAuthToken(user, logout);
-
-      //   if (data.token) {
-      //     navigate(from, { replace: true });
-      //   }
+      // Won't work if it's not added :) First user is set up then the link in the navbar and then we can go.
+      setTimeout(() => {
+        navigate(from, { replace: true });
+      }, 300);
     } catch (err) {
       setLoading(false);
       setError(err.message);
