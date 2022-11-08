@@ -1,15 +1,34 @@
 import { useLoaderData, Link } from "react-router-dom";
 import { FaStar, FaDollarSign } from "react-icons/fa";
 import { useAuth } from "../../Context/AuthContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import ReviewCard from "./ReviewCard";
 export default function ServiceDetails() {
   const { currentUser } = useAuth();
+
+  const [serviceReviews, setServiceReviews] = useState([]);
+  const [ratings, setRatings] = useState(5);
 
   const serviceDetails = useLoaderData();
   const { _id, img, price, rating, title, description } = serviceDetails;
 
-  const [ratings, setRatings] = useState(5);
+  useEffect(() => {
+    const fetchReviews = async function () {
+      try {
+        const res = await fetch(
+          `http://localhost:5000/review?serviceName=${title}`
+        );
+        const data = await res.json();
+        setServiceReviews(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchReviews();
+  }, [title]);
+
   const handleSubmit = async function (e) {
     e.preventDefault();
     const form = e.target;
@@ -21,6 +40,7 @@ export default function ServiceDetails() {
       rating: ratings,
       description: text,
       email: currentUser.email,
+      author: currentUser.displayName,
       img: currentUser.photoURL,
       createdAt: new Date().toISOString(),
     };
@@ -50,6 +70,7 @@ export default function ServiceDetails() {
   return (
     <div>
       {/* Service Details */}
+
       <div className="flex flex-col gap-8 md:flex-row">
         <img
           className="object-cover object-center rounded-md w-96 h-80"
@@ -71,13 +92,17 @@ export default function ServiceDetails() {
           </div>
         </div>
       </div>
-      {/* Review Section */}
-      {currentUser?.uid ? (
-        <div className="mt-20">
-          {/* Show all review for this service */}
 
+      {/* Review Section */}
+
+      {currentUser?.uid ? (
+        <div className="mt-28">
+          {/* Show all review for this service */}
+          {serviceReviews.map((review, i) => (
+            <ReviewCard key={i} review={review} />
+          ))}
           {/* Create a review */}
-          <div>
+          <div className="mt-20">
             <h2 className="mb-10 text-xl font-semibold sm:text-3xl">
               Add a review for {title}
             </h2>
@@ -87,7 +112,7 @@ export default function ServiceDetails() {
                   Details:
                 </label>
                 <textarea
-                  className="flex-1 rounded-md ring-amber-400 focus:outline-none ring-2 focus:ring-amber-500"
+                  className="flex-1 px-1 rounded-md ring-amber-400 focus:outline-none ring-2 focus:ring-amber-500"
                   name="textbox"
                   id="textbox"
                   rows="6"
