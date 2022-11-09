@@ -1,8 +1,10 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 export default function UpdateReview() {
+  useTitle("Update Review");
   const review = useLoaderData();
   const navigate = useNavigate();
 

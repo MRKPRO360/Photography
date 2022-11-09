@@ -4,7 +4,9 @@ import { useAuth } from "../../Context/AuthContext";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import ReviewCard from "./ReviewCard";
+import useTitle from "../../hooks/useTitle";
 export default function ServiceDetails() {
+  useTitle("Service Details");
   const { currentUser } = useAuth();
   const navigate = useNavigate(-1);
   const [serviceReviews, setServiceReviews] = useState([]);

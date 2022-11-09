@@ -1,8 +1,10 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 export default function AddService() {
+  useTitle("Add Service");
   const [ratings, setRatings] = useState(4.5);
   const [price, setPrice] = useState(6.99);
   const navigate = useNavigate();

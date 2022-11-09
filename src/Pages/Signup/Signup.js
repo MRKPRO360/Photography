@@ -2,9 +2,10 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
-// import SetAuthToken from "../../Utils/SetAuthToken";
+import useTitle from "../../hooks/useTitle";
 
 export default function Signup() {
+  useTitle("Signup");
   const { signup, googleLogin } = useAuth();
 
   const navigate = useNavigate("/");
