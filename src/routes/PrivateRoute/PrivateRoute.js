@@ -8,7 +8,7 @@ export default function PrivateRoute({ children }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
-        <FadeLoader color="#36d7b7" />
+        <FadeLoader color="rgb(251,191,36)" />
       </div>
     );
   }

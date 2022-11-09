@@ -1,15 +1,30 @@
 import { FaStar, FaDollarSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+import "react-photo-view/dist/react-photo-view.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+
 export default function ServiceCard({
   service: { _id, title, img, rating, price, description },
 }) {
   return (
     <div className="rounded-md shadow shadow-amber-100 flex flex-col justify-between">
-      <img
-        className="object-cover object-center w-full rounded-md h-72"
-        src={img}
-        alt={title}
-      />
+      <PhotoProvider
+        speed={() => 800}
+        easing={(type) =>
+          type === 2
+            ? "cubic-bezier(0.36, 0, 0.66, -0.56)"
+            : "cubic-bezier(0.34, 1.56, 0.64, 1)"
+        }
+      >
+        <PhotoView src={img}>
+          <img
+            className="object-cover object-center w-full rounded-md h-72"
+            src={img}
+            alt={title}
+          />
+        </PhotoView>
+      </PhotoProvider>
       <div className="pl-1 space-y-5">
         <h3 className="mt-8 text-lg font-semibold">{title}</h3>
         <p>
