@@ -2,10 +2,10 @@
 module.exports = {
   content: ["./src/**/*{js,jsx}"],
   theme: {
-    screens: {
-      xs: { max: "576px" },
-    },
     extend: {
+      screens: {
+        xs: { max: "576px" },
+      },
       gridTemplateColumns: {
         auto: "repeat(auto-fit,minmax(300px, 1fr))",
       },

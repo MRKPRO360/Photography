@@ -58,7 +58,7 @@ export default function Nav() {
               to={el.path}
               className={({ isActive }) =>
                 isActive
-                  ? "bg-amber-500 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400 "
+                  ? "bg-amber-400 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400 "
                   : "font-semibold transition duration-300 px-3 py-1 rounded"
               }
             >
@@ -74,7 +74,7 @@ export default function Nav() {
                   to={el.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-amber-500 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                      ? "bg-amber-400 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
                       : "font-semibold transition duration-300 px-3 py-1 rounded"
                   }
                 >
@@ -93,7 +93,7 @@ export default function Nav() {
               to="/login"
               className={({ isActive }) =>
                 isActive
-                  ? "bg-amber-500 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
+                  ? "bg-amber-400 text-white inline-block font-semibold transition duration-300 px-3 py-2 rounded shadow-md shadow-amber-400"
                   : "font-semibold transition duration-300 px-3 py-1 rounded"
               }
             >

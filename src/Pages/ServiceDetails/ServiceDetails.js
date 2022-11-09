@@ -37,6 +37,7 @@ export default function ServiceDetails() {
     const review = {
       serviceName: title,
       serviceId: _id,
+      serviceImg: img,
       rating: ratings,
       description: text,
       email: currentUser.email,
