@@ -16,14 +16,17 @@ export default function MyReviews() {
       );
 
       if (confirmation) {
-        const res = await fetch(`http://localhost:5000/review/${id}`, {
-          method: "DELETE",
-          headers: {
-            authorization: `Bearer ${localStorage.getItem(
-              "photography-token"
-            )}`,
-          },
-        });
+        const res = await fetch(
+          `https://photography-server-eight.vercel.app/review/${id}`,
+          {
+            method: "DELETE",
+            headers: {
+              authorization: `Bearer ${localStorage.getItem(
+                "photography-token"
+              )}`,
+            },
+          }
+        );
         const data = await res.json();
 
         if (data.deletedCount > 0) {
@@ -44,7 +47,7 @@ export default function MyReviews() {
     const fetchMyReviews = async function () {
       try {
         const res = await fetch(
-          `http://localhost:5000/review?email=${currentUser?.email}`,
+          `https://photography-server-eight.vercel.app/review?email=${currentUser?.email}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem(

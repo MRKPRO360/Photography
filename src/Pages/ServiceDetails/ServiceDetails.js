@@ -19,7 +19,7 @@ export default function ServiceDetails() {
     const fetchReviews = async function () {
       try {
         const res = await fetch(
-          `http://localhost:5000/reviewByServiceName?serviceName=${title}`
+          `https://photography-server-eight.vercel.app/reviewByServiceName?serviceName=${title}`
         );
         const data = await res.json();
         setServiceReviews(data);
@@ -57,7 +57,10 @@ export default function ServiceDetails() {
         body: JSON.stringify(review),
       };
 
-      const res = await fetch("http://localhost:5000/review", config);
+      const res = await fetch(
+        "https://photography-server-eight.vercel.app/review",
+        config
+      );
       const data = await res.json(review);
 
       if (data.acknowledged) {

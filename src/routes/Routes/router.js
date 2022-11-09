@@ -23,13 +23,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        loader: () => fetch("http://localhost:5000/services"),
+        loader: () =>
+          fetch("https://photography-server-eight.vercel.app/services"),
         element: <Services />,
       },
       {
         path: "/services/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(
+            `https://photography-server-eight.vercel.app/services/${params.id}`
+          ),
         element: <ServiceDetails />,
       },
       {
@@ -55,7 +58,9 @@ const router = createBrowserRouter([
       {
         path: "/updateReview/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.id}`),
+          fetch(
+            `https://photography-server-eight.vercel.app/review/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <UpdateReview />
@@ -78,3 +83,4 @@ const router = createBrowserRouter([
   },
 ]);
 export default router;
+// https://photography-server-eight.vercel.app/

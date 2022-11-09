@@ -31,7 +31,7 @@ export default function UpdateReview() {
         body: JSON.stringify(updatedReview),
       };
       const res = await fetch(
-        `http://localhost:5000/review/${review._id}`,
+        `https://photography-server-eight.vercel.app/review/${review._id}`,
         config
       );
       const data = await res.json();

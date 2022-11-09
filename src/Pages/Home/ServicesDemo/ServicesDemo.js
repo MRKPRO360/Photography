@@ -7,7 +7,9 @@ export default function ServicesDemo() {
   useEffect(() => {
     const loadData = async function () {
       try {
-        const res = await fetch("http://localhost:5000/services?limit=3");
+        const res = await fetch(
+          "https://photography-server-eight.vercel.app/services?limit=3"
+        );
         const data = await res.json();
         setServicesDemo(data);
       } catch (err) {

@@ -12,7 +12,10 @@ export default async function SetAuthToken(user, logout) {
       body: JSON.stringify(currentUser),
     };
 
-    const res = await fetch("http://localhost:5000/jwt", config);
+    const res = await fetch(
+      "https://photography-server-eight.vercel.app/jwt",
+      config
+    );
     const data = await res.json();
 
     localStorage.setItem("photography-token", data.token);
