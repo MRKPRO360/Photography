@@ -79,7 +79,10 @@ export default function UpdateReview() {
             <option value="5">5</option>
           </select>
         </div>
-        <button className="block px-4 py-[6px] mt-4 font-semibold text-center text-white transition duration-300 rounded shadow-md bg-amber-400 shadow-amber-400 hover:bg-amber-500 active:translate-y-1">
+        <button
+          type="submit"
+          className="block px-4 py-[6px] mt-4 font-semibold text-center text-white transition duration-300 rounded shadow-md bg-amber-400 shadow-amber-400 hover:bg-amber-500 active:translate-y-1"
+        >
           Submit
         </button>
       </form>
