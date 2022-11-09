@@ -25,8 +25,8 @@ export default function ServiceCard({
           />
         </PhotoView>
       </PhotoProvider>
-      <div className="pl-1 space-y-5">
-        <h3 className="mt-8 text-lg font-semibold">{title}</h3>
+      <div className="pl-1 space-y-5 font-semibold">
+        <h3 className="mt-8 text-lg sm:text-xl ">{title}</h3>
         <p>
           {description.length > 100 ? (
             <span>

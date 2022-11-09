@@ -19,7 +19,7 @@ export default function ServicesDemo() {
 
   return (
     <div>
-      <div className="grid gap-16 mb-16 mt-36 grid-cols-auto">
+      <div className="grid gap-16 mt-48 mb-24 grid-cols-auto">
         {servicesDemo.map((service, i) => (
           <ServiceCard key={i} service={service} />
         ))}
