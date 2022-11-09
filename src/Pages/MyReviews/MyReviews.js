@@ -8,7 +8,6 @@ export default function MyReviews() {
   const [reviews, setReviews] = useState([{}]);
 
   const handleDeleteReview = async function (id) {
-    console.log(id);
     try {
       const confirmation = window.confirm(
         "Are you sure to delete this review?"
@@ -52,7 +51,11 @@ export default function MyReviews() {
 
   return (
     <div>
-      {reviews.length > 0 ? (
+      <h2 className="text-2xl mb-16 font-semibold underline underline-offset-8 decoration-4 decoration-amber-500">
+        My All Reviews
+      </h2>
+
+      {reviews.length > 0 && reviews[0]._id ? (
         <div className="space-y-10">
           {reviews.map((review, i) => (
             <MyReviewCard
