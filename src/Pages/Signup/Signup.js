@@ -4,9 +4,10 @@ import { useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
 import useTitle from "../../hooks/useTitle";
 import { FadeLoader } from "react-spinners";
+import SetAuthToken from "../../Utils/SetAuthToken";
 export default function Signup() {
   useTitle("Signup");
-  const { signup, googleLogin, loading: processing } = useAuth();
+  const { signup, googleLogin, logout, loading: processing } = useAuth();
 
   const navigate = useNavigate("/");
   const location = useLocation();
@@ -26,7 +27,14 @@ export default function Signup() {
     try {
       setError("");
       setLoading(true);
-      await signup(email, password, name, photoLink);
+      const result = await signup(email, password, name, photoLink);
+      const user = result.user;
+
+      const data = await SetAuthToken(user, logout);
+
+      if (data.token) {
+        navigate(from, { replace: true });
+      }
     } catch (err) {
       setLoading(false);
       setError(err.message);
@@ -39,6 +47,11 @@ export default function Signup() {
       setError("");
       const result = await googleLogin();
       const user = result.user;
+      const data = await SetAuthToken(user, logout);
+
+      if (data.token) {
+        navigate(from, { replace: true });
+      }
     } catch (err) {
       setError(err.message);
       console.log(err);
