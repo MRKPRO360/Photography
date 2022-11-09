@@ -26,11 +26,30 @@ export default function Login() {
     try {
       setError("");
       setLoading(true);
-      await login(email, password);
-      // Won't work if it's not added :) First user is set up then the link in the navbar and then we can go.
-      setTimeout(() => {
-        navigate(from, { replace: true });
-      }, 300);
+      const result = await login(email, password);
+      const user = result.user;
+      const currentUser = {
+        email: user.email,
+      };
+
+      const config = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(currentUser),
+      };
+
+      const res = await fetch("http://localhost:5000/jwt", config);
+      const data = await res.json();
+
+      localStorage.setItem("photography-token", data.token);
+      if (data.token) {
+        // Won't work if it's not added :) First user is set up then the link in the navbar and then we can go.
+        setTimeout(() => {
+          navigate(from, { replace: true });
+        }, 300);
+      }
     } catch (err) {
       setLoading(false);
       setError(err.message);

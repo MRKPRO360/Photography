@@ -19,7 +19,7 @@ export default function ServiceDetails() {
     const fetchReviews = async function () {
       try {
         const res = await fetch(
-          `http://localhost:5000/review?serviceName=${title}`
+          `http://localhost:5000/reviewByServiceName?serviceName=${title}`
         );
         const data = await res.json();
         setServiceReviews(data);

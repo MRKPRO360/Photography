@@ -26,6 +26,7 @@ export default function UpdateReview() {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("photography-token")}`,
         },
         body: JSON.stringify(updatedReview),
       };

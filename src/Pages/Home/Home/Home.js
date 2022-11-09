@@ -1,6 +1,7 @@
 import useTitle from "../../../hooks/useTitle";
-import Banner from "./Banner";
-import ServicesDemo from "./ServicesDemo";
+import AboutMe from "../AboutMe/AboutMe";
+import Banner from "../Banner/Banner";
+import ServicesDemo from "../ServicesDemo/ServicesDemo";
 
 export default function Home() {
   useTitle("Home");
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <Banner />
       <ServicesDemo />
+      <AboutMe />
     </div>
   );
 }
