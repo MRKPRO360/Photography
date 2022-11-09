@@ -47,16 +47,19 @@ export default function AuthProvider({ children }) {
 
   // login
   const login = async function (email, password) {
+    setLoading(true);
     return await signInWithEmailAndPassword(auth, email, password);
   };
 
   // google login
   const googleLogin = async function () {
+    setLoading(true);
     return await signInWithPopup(auth, googleProvider);
   };
 
   // logout
   const logout = async function () {
+    setLoading(true);
     return await signOut(auth);
   };
 
@@ -68,9 +71,5 @@ export default function AuthProvider({ children }) {
     currentUser,
     loading,
   };
-  return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
