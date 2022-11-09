@@ -1,7 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 export default function MyReviewCard({
-  review: { serviceName, rating, serviceImg, description, createdAt },
+  review: { serviceName, rating, serviceImg, description, createdAt, _id },
+  handleDeleteReview,
 }) {
   return (
     <div className="shadow-sm shadow-amber-100 p-4 space-y-5">
@@ -23,7 +24,10 @@ export default function MyReviewCard({
         <button className=" inline-block px-3 py-2 text-center text-white transition duration-300 bg-amber-400 rounded shadow-md shadow-amber-400 hover:bg-amber-500 active:translate-y-1">
           Update Review
         </button>
-        <button className=" inline-block px-4 py-2 text-center text-white transition duration-300 bg-red-400 rounded shadow-md shadow-red-400 hover:bg-red-500 active:translate-y-1">
+        <button
+          className=" inline-block px-4 py-2 text-center text-white transition duration-300 bg-red-400 rounded shadow-md shadow-red-400 hover:bg-red-500 active:translate-y-1"
+          onClick={() => handleDeleteReview(_id)}
+        >
           Delete Review
         </button>
       </div>
