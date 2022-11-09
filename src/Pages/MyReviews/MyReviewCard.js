@@ -2,15 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export default function MyReviewCard({
-  review: {
-    serviceName,
-    rating,
-    serviceImg,
-    description,
-    createdAt,
-    _id,
-    updatedAt,
-  },
+  review: { serviceName, rating, serviceImg, description, createdAt, _id },
   handleDeleteReview,
 }) {
   return (
@@ -26,8 +18,8 @@ export default function MyReviewCard({
         </div>
         <p className="font-semibold">{description}</p>
         <div className="flex flex-col items-center gap-1 font-semibold">
-          <p>{createdAt ? "Review Added" : "Review Updated"}:</p>
-          <span>{new Date(createdAt || updatedAt).toLocaleDateString()}</span>
+          <p>Review Added:</p>
+          <span>{new Date(createdAt).toLocaleDateString()}</span>
         </div>
         <div className="flex items-center gap-1 font-semibold">
           <span>Ratings: {rating}</span> <FaStar className="text-amber-500" />

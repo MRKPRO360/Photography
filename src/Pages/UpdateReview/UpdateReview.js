@@ -16,8 +16,7 @@ export default function UpdateReview() {
     const updatedReview = {
       rating: ratings,
       description: text || review.description,
-      createdAt: undefined,
-      updatedAt: new Date().toISOString(),
+      createdAt: new Date().toISOString(),
     };
 
     try {
