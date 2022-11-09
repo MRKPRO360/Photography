@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData, Link, useNavigate } from "react-router-dom";
 import { FaStar, FaDollarSign } from "react-icons/fa";
 import { useAuth } from "../../Context/AuthContext";
 import { useEffect, useState } from "react";
@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import ReviewCard from "./ReviewCard";
 export default function ServiceDetails() {
   const { currentUser } = useAuth();
-
+  const navigate = useNavigate(-1);
   const [serviceReviews, setServiceReviews] = useState([]);
   const [ratings, setRatings] = useState(5);
 
@@ -62,6 +62,7 @@ export default function ServiceDetails() {
           duration: 3000,
           icon: "😍",
         });
+        navigate(-1);
         form.reset();
       }
     } catch (err) {}
@@ -98,9 +99,11 @@ export default function ServiceDetails() {
       {currentUser?.uid ? (
         <div className="mt-28">
           {/* Show all review for this service */}
-          {serviceReviews.map((review, i) => (
-            <ReviewCard key={i} review={review} />
-          ))}
+          <div className="space-y-10">
+            {serviceReviews.map((review, i) => (
+              <ReviewCard key={i} review={review} />
+            ))}
+          </div>
           {/* Create a review */}
           <div className="mt-20">
             <h2 className="mb-10 text-xl font-semibold sm:text-3xl">
