@@ -1,6 +1,7 @@
 import useTitle from "../../../hooks/useTitle";
 import AboutMe from "../AboutMe/AboutMe";
 import Banner from "../Banner/Banner";
+import MyGadgets from "../MyGadgets/MyGadgets";
 import ServicesDemo from "../ServicesDemo/ServicesDemo";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <ServicesDemo />
       <AboutMe />
+      <MyGadgets />
     </div>
   );
 }
